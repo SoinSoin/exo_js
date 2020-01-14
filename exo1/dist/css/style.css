@@ -1,1 +1,48 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+main table {
+  border: 2px solid black;
+}
+
+main table tbody td {
+  border: 2px solid black;
+  padding: 2em;
+}
+
+@-webkit-keyframes starWars {
+  0% {
+    -webkit-transform: translate3d(0, 500px, 0) rotateX(-60deg) scale(2);
+            transform: translate3d(0, 500px, 0) rotateX(-60deg) scale(2);
+  }
+  99% {
+    -webkit-transform: translate3d(0, -1000px, 0) rotateX(60deg) scale(0.19);
+            transform: translate3d(0, -1000px, 0) rotateX(60deg) scale(0.19);
+  }
+  100% {
+    display: none;
+  }
+}
+
+@keyframes starWars {
+  0% {
+    -webkit-transform: translate3d(0, 500px, 0) rotateX(-60deg) scale(2);
+            transform: translate3d(0, 500px, 0) rotateX(-60deg) scale(2);
+  }
+  99% {
+    -webkit-transform: translate3d(0, -1000px, 0) rotateX(60deg) scale(0.19);
+            transform: translate3d(0, -1000px, 0) rotateX(60deg) scale(0.19);
+  }
+  100% {
+    display: none;
+  }
+}
+
+.starWars {
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-animation-name: starWars;
+          animation-name: starWars;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+/*# sourceMappingURL=style.css.map */
