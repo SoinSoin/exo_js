@@ -1,0 +1,107 @@
+@charset "UTF-8";
+html,
+body,
+section,
+main {
+  padding: 0;
+  margin: 0;
+}
+
+#app {
+  max-width: 100vw;
+}
+
+#app .hero-fullheight {
+  max-width: calc(100vw - 5rem);
+  min-height: calc(100vh - 10rem);
+  max-height: 100vh;
+  background-color: whitesmoke;
+  padding: 5rem 2.5rem;
+}
+
+#app .container {
+  /* On ajoute une marge sur les cotés de l'écran */
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#app .box {
+  -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  background-color: white;
+  border-radius: 35px;
+  margin: 0 20%;
+  padding: 5% 10%;
+}
+
+#app .box .container-box,
+#app .box .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 25px;
+}
+
+#app .form {
+  width: 100%;
+}
+
+#app .form button {
+  background: white;
+  padding: 10px 20px;
+  border: 5px solid rgba(172, 255, 47, 0.8);
+  border-radius: 10px;
+}
+
+#app .form button:hover {
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  border: 5px solid #acff2f;
+  background-color: #acff2f;
+  cursor: pointer;
+}
+
+#app .form label {
+  width: 100%;
+  margin: 15px 7.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#app .form label .desc-input {
+  width: 100%;
+  margin: 5px 0;
+}
+
+#app .form label .txt-form {
+  padding: 5px 15px;
+  width: 100%;
+  height: 2rem;
+  border-radius: 290486px;
+  border: 0;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+/*# sourceMappingURL=style.css.map */
