@@ -4,7 +4,7 @@ function init() {
     document.getElementById("send").onclick = function () {
         var newContact = Object.create(contact)
         newContact.setForm("#contact")
-        console.log(JSON.stringify(newContact.getData()))
+        JSON.stringify(newContact.getData())
     }
 }
 
@@ -39,7 +39,7 @@ var contact = {
     // return all input text content in form
     getInputForm: function (forms, arrInputForm) {
         forms.childNodes.forEach(function (elChildForm) {
-            if (elChildForm.tagName === "INPUT" && elChildForm.type!=='button' || elChildForm.tagName === "TEXTAREA") {
+            if (elChildForm.tagName === "INPUT" && elChildForm.type !== 'button' || elChildForm.tagName === "TEXTAREA") {
                 arrInputForm.push({ el: elChildForm, name: elChildForm.name })
             }
             if (forms.childNodes.length > 0) {
