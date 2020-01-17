@@ -26,80 +26,11 @@ function init() {
 
     // delete maTC.getColorTxt()[0];
 }
-
-
-// var Telecommande = {
-//     elTD: {
-//         el: [],
-//         color: "",
-//         counter: 0
-//     },
-//     elTdDOM: document.querySelectorAll("td"),
-
-
-
-//     // set color at init
-//     init: function (p_color_txt) {
-//         this.setColor(p_color_txt)
-//     },
-
-//     // set color
-//     setColor(_color) {
-//         this.elTD.color = _color;
-//     },
-//     // getColorTxt
-//     getColorTxt: function () {
-//         return this.elTD
-//     },
-//     // add text id
-//     addId: function () {
-//         var self = this
-//         this.getTD(document.getElementById("tableau"), [], 0).forEach(function (elTD) {
-//             elTD.el.style.color = self.elTD.color
-//             elTD.el.innerText = elTD.el.id
-//             self.elTD.el.push(elTD) ²
-//         })
-//         this.elTD.counter = this.elTD.el.length
-//     },
-
-//     delAleatoire: function () {
-//         this.elDOM()
-//     },
-//     telClick: function (p_id_click) {
-//         if (p_id_click === 1) {
-//             this.addId();
-//         } if (p_id_click === 2) {
-//             this.delAleatoire()
-//         }
-//     },
-
-//     getTD(elTab, arrEl, place) {
-//         var self = this;
-//         elTab.childNodes.forEach(function (eltd) {
-//             if (eltd.tagName === "TD") {
-//                 arrEl.push({ el: eltd })
-//             } else {
-//                 self.getTD(eltd, arrEl, place)
-//             }
-//         })
-//         for (var index = 0; index < arrEl.length; index++) {
-//             arrEl[index].place = index
-
-//         }
-//         return arrEl.reverse()
-//     }
-
-// }
-
-
-
-
 var Telecommande = {
     tableau: {
         tab: {},
         elTD: []
     },
-    deletes: 0,
     color: '',
 
     init: function (_name_tab) {
@@ -134,23 +65,16 @@ var Telecommande = {
         if (p_id_click == 4) {
             this.allCase()
         }
+        console.log(this.tableau.elTD)
     },
 
     delAleatoire: function () {
-        // cons
-        var arr = []
-        for (var i = 0; this.tableau.elTD.length > i; i++) {
-            arr.push(i)
+        var halfTable = this.tableau.elTD.length / 2
+        for (var j = 0; halfTable >= j; j++) {
+            var alea = Math.floor(Math.random() * Math.round(this.tableau.elTD.length));
+            this.tableau.elTD[alea].innerText = "";
+            this.tableau.elTD.splice(alea, 1);
         }
-
-        for (var j = 0; (this.tableau.elTD.length/2) > j; j++) {
-            var alea = Math.floor(Math.random() * Math.floor((this.tableau.elTD.length/2)));
-            this.tableau.elTD[arr[alea]].innerText = "";
-            this.tableau.elTD.splice(arr[alea], 1);
-            arr.splice(alea, 1);
-        }
-
-
     },
 
     firstCase: function () {

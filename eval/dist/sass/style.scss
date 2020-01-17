@@ -1,0 +1,29 @@
+div {
+    float: left;
+    margin: 0 10px;
+    padding: 20px;
+    min-height: 200px;
+
+    // Ecrire ici la suite de la feuille de style LESS
+    &:nth-child(1) {
+        border: 3px solid blue;
+        width: 200px;
+    }
+
+    &:nth-child(2) {
+        border: 3px solid red;
+        width: 400px;
+
+        img {
+            height: 85px;
+            margin: 5px;
+            border: 1px solid grey;
+            cursor: pointer;
+        }
+
+        img:hover {
+            background-color: red;
+        }
+    }
+
+}

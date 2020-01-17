@@ -1,0 +1,33 @@
+main {
+    table {
+        border: 2px solid black;
+
+        tbody {
+            td {
+                border: 2px solid black;
+                padding:2em;
+            }
+        }
+    }
+
+}
+
+
+@keyframes starWars {
+    0% {
+      transform: translate3d(0,500px,0) rotateX(-60deg) scale(2);
+    }
+    99% {
+      transform: translate3d(0, -1000px, 0) rotateX(60deg) scale(.19);
+    }
+    100% {
+      display: none;
+    }
+  }
+  
+  .starWars {
+    animation-timing-function: ease-out;
+    transform-origin: bottom center;
+    animation-name: starWars;
+    animation-duration: 10s;
+  }
