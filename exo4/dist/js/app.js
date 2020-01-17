@@ -70,7 +70,7 @@ var Telecommande = {
 
     delAleatoire: function () {
         var halfTable = this.tableau.elTD.length / 2
-        for (var j = 0; halfTable >= j; j++) {
+        for (var j = 0; halfTable > j; j++) {
             var alea = Math.floor(Math.random() * Math.round(this.tableau.elTD.length));
             this.tableau.elTD[alea].innerText = "";
             this.tableau.elTD.splice(alea, 1);
